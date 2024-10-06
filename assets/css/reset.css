@@ -1,0 +1,36 @@
+
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;}
+/* html, body {height:100%;} */
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+ul {list-style: none;}
+form, input {border: none;}
+
+
+body {
+  font-family: "Creato Display", 'Pretendard', sans-serif;
+  background: #000;
+  letter-spacing: -.02em;
+  word-break: keep-all;
+}
+/* html {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.lenis-wrap {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+} */

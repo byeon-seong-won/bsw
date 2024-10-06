@@ -1,0 +1,48 @@
+
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+.mo-display {display: none;}
+.pc-display {display: block;}
+
+
+/* cursor custom */
+.cursor {
+  width:12px;
+  height: 12px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 100;
+  backdrop-filter: sepia(100%);
+  filter: invert(1);
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  transition-property: transform;
+  pointer-events: none;
+}
+.cursor.on {
+  transform: scale(1.05);
+}
+#cursor_div {position: fixed;left: 0;top: 0;pointer-events: none;z-index: 5000;} 
+#cursor_div .inner_wrap { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transform: translate(-50%, -50%); 
+  transition: opacity .3s ease; 
+  opacity: 0; 
+} 
+#cursor_div .inner_wrap.on {opacity: 1;} 
+#cursor_div .inner { text-align: center;} 
+#cursor_div .inner p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+} 

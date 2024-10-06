@@ -19,7 +19,6 @@
   <link rel="shortcut icon" href="./assets/img/favi.ico" type="image/x-icon">
 </head>
 <body>
-  
       <div class="cursor pc-display"></div>
       <div id="cursor_div" class="pc-display">
         <div class="inner_wrap">
@@ -53,9 +52,9 @@
         <div class="copy-area">
           <p>2024 &copy; Byeon-Seongwon All Rights Reserved</p>
         </div>
-        <!-- <div class="time-area">
+        <div class="time-area">
           KOR <span id="time"></span>
-        </div> -->
+        </div>
       </header>
       <main>
         <section class="sc-visual">
@@ -545,19 +544,18 @@
           <small>© 2024. Seong won Byeon All Rights Reserved.</small>
         </div>
       </footer>
+      <script>
+        // --------------- header time --------------- 
+        function updateTime() {
+          var today = new Date();   
+          var hours = ('0' + today.getHours()).slice(-2); 
+          var minutes = ('0' + today.getMinutes()).slice(-2);
+          var seconds = ('0' + today.getSeconds()).slice(-2); 
+          var timeString = hours + ':' + minutes  + ':' + seconds;
+          document.getElementById("time").innerHTML = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+      </script>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Test</title>
-  <link rel="stylesheet" href="./bundle.css">
-</head>
-<body>
-  <h1>Hello Webpack!</h1>
-  <script src="./bundle.js"></script>
-</body>
-</html> -->

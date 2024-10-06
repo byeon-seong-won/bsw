@@ -85,22 +85,8 @@ import '../img/std.mp4';
 
 
 
-  // --------------- header time --------------- 
-  // function updateTime() {
-  //   var today = new Date();   
-  //   var hours = ('0' + today.getHours()).slice(-2); 
-  //   var minutes = ('0' + today.getMinutes()).slice(-2);
-  //   var seconds = ('0' + today.getSeconds()).slice(-2); 
-  //   var timeString = hours + ':' + minutes  + ':' + seconds;
-  //   document.getElementById("time").innerHTML = timeString;
-  // }
-  // setInterval(updateTime, 1000);
-  // updateTime();
 
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   setInterval(updateTime, 1000);
-  //   updateTime();
-  // });
+
 
 
 
@@ -225,7 +211,7 @@ import '../img/std.mp4';
       document.addEventListener("mousemove", (e) => {
         const x = e.clientX;
         const y = e.clientY;
-        $("#cursor__div").css('transform', 'translate(' + x + 'px, ' + y + 'px)');
+        $("#cursor_div").css('transform', 'translate(' + x + 'px, ' + y + 'px)');
         $('.prj-item .thumb-wrap').on('mouseover', function () {
           $('.inner_wrap').addClass('on');
           $('.cursor').css('display','none');

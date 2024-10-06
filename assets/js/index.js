@@ -97,7 +97,10 @@ import '../img/std.mp4';
   setInterval(updateTime, 1000);
   updateTime();
 
-
+  document.addEventListener("DOMContentLoaded", function() {
+    setInterval(updateTime, 1000);
+    updateTime();
+  });
 
 
 

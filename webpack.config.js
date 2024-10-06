@@ -6,7 +6,7 @@ module.exports = {
   entry: './assets/js/index.js', // JS 진입점 파일
   output: {
     filename: 'bundle.js', // 번들 파일 이름
-    path: path.resolve(__dirname, 'docs'), // 출력 폴더 (dist 폴더)
+    path: path.resolve(__dirname, 'docs'), // 출력 폴더 (docs 폴더)
     clean: true, // 이전 빌드 결과물 삭제
   },
   plugins: [

@@ -121,6 +121,7 @@
   flex: 1;
 }
 .about__wrap .about__inner .about__content {
+  font-family: var(--font-family-preten);
   width: 60%;
   font-size: 22px;
 } 

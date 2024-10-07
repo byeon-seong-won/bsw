@@ -48,6 +48,7 @@ form, input {border: none;}
 
   /* 폰트관련 */
   --font-family-preten: "Pretendard", sans-serif;
+  --font-family-creato: "Creato Display", sans-serif;
   --base-letterspacing:-0.02em;
   --font-weight-light: 300;
   --font-weight-regular: 400;
@@ -59,7 +60,7 @@ body {
   background: var(--black);
   color: var(--white);
   letter-spacing: var(--base-letterspacing);
-  font-family: var(--font-family-preten);
+  font-family: var(--font-family-creato);
   font-weight: var(--font-weight-medium);
   color: var(--primary-color);
   font-size: var(--base-font-size);
@@ -378,6 +379,7 @@ footer small {
   flex: 1;
 }
 .about__wrap .about__inner .about__content {
+  font-family: var(--font-family-preten);
   width: 60%;
   font-size: 22px;
 } 

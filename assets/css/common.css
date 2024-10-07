@@ -30,7 +30,7 @@
   transform: scale(1.05);
 }
 #cursor_div {position: fixed;left: 0;top: 0;pointer-events: none;z-index: 5000;} 
-#cursor_div .inner_wrap { 
+#cursor_div .cursor__wrap { 
   display: flex; 
   justify-content: center; 
   align-items: center; 
@@ -38,11 +38,11 @@
   transition: opacity .3s ease; 
   opacity: 0; 
 } 
-#cursor_div .inner_wrap.on {opacity: 1;} 
-#cursor_div .inner { text-align: center;} 
-#cursor_div .inner p {
+#cursor_div .cursor__wrap.on {opacity: 1;} 
+#cursor_div .cursor__inner { text-align: center;} 
+#cursor_div .cursor__inner p {
   font-size: 16px;
-  color: #fff;
+  color: var(--white);
   font-weight: bold;
   text-transform: uppercase;
 } 

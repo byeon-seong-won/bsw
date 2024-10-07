@@ -7,7 +7,7 @@
 /* header */
 header {
   position: fixed;
-  color: #fff;
+  color: var(--white);
   padding: 40px 60px;
   z-index: 10;
   display: flex;
@@ -15,9 +15,9 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-header > h1 > a {
+header .header__logo-link {
   font-size: 18px;
-  color: #fff;
+  color: var(--white);
   font-weight: 300;
 }
 
@@ -25,7 +25,7 @@ header > h1 > a {
 
 /* main */
 main {
-  border-bottom: .01rem solid #222;
+  border-bottom: .01rem solid var(--black-1);
 }
 
 
@@ -35,62 +35,51 @@ footer {
   position: relative;
   padding: 100px 50px;
 }
-footer .footer-headline {
+footer .footer__headline {
   font-size: 50px;
-  color: #fff;
+  color: var(--white);
   font-weight: bold;
   text-transform: uppercase;
 }
-footer .footer-cont {
+footer .footer__content {
   position: relative;
   width: 100%;
 }
-footer ul {
+footer .footer__list {
   height: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 }
-footer ul li {
+footer .footer__list li {
   flex: 1;
-  color: #fff;
+  color: var(--white);
 }
-footer ul .video video {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-footer ul li p {
-  font-size: 26px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-}
-footer ul li a {
+footer .footer__list li a {
   font-size: 20px;
   font-weight: 300;
   transition: .5s;
 }
-footer ul .contact {
+footer .footer__list .footer__contact {
   display: flex;
   flex-direction: column;
 }
-footer ul .link {
+footer .footer__list .footer__link {
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 10px
 }
-footer ul .link a {
+footer .footer__list .footer__link a {
   font-size: 18px;
 }
-footer ul a:hover {
+footer .footer__list a:hover {
   opacity: .5;
 }
 footer small {
   display: block;
   text-align: right;
-  color: #ddd;
+  color: var(--white-4);
   font-size: 14px;
   margin-top: 10px;
 }
@@ -100,28 +89,28 @@ footer small {
 
 
 @media (max-width:1024px) {
-  header > h1 > a {
+  header .header__logo-link {
     font-size: 16px;
   }
   footer {
     padding: 50px 20px;
   }
-  footer .footer-cont {
+  footer .footer__content {
     padding: 0;
   }
-  footer .footer-headline {
+  footer .footer__headline {
     font-size: 40px;
   }
-  footer ul {
+  footer .footer__list {
     margin-top: 20px;
   }
-  footer ul .contact {
+  footer .footer__list .footer__contact {
     margin-bottom: 0;
   }
-  footer ul li a {
+  footer .footer__list li a {
     font-size: 16px;
   }
-  footer ul .link a {
+  footer .footer__list .footer__link a {
     font-size: 14px;
   }
   footer small {
@@ -136,23 +125,23 @@ footer small {
   header {
     padding: 20px;
   }
-  header .copy-area {
+  header .header__copy-area {
     display: none;
   }
-  footer .footer-headline {
+  footer .footer__headline {
     font-size: 25px;
   }
-  footer ul {
+  footer .footer__list {
     margin-top: 30px;
     flex-direction: column;
     align-items: start;
   }
-  footer ul .link {
+  footer .footer__list .footer__link {
     margin-top: 5px;
   }
   footer small {
     text-align: left;
     margin-top: 20px;
-    color: #999;
+    color: var(--gray);
   }
 }

@@ -90,9 +90,9 @@ import '../img/std.mp4';
 
 
 
-  // --------------- 태블릿 이상 intro ~ sc-visual --------------- 
+  // --------------- 태블릿 이상 intro ~ visual__wrap --------------- 
   if (window.matchMedia("(min-width: 1024px)").matches) {
-    var spans = document.querySelectorAll('#sct span');
+    var spans = document.querySelectorAll('#scroll-text span');
     spans.forEach(function(span, index) {
         var currentScramble = new ScrambleText(
             span,
@@ -111,14 +111,14 @@ import '../img/std.mp4';
     });
     function wordChange() {
       const text = 'portfolio'; 
-      const spans = document.querySelectorAll('#sct span');
+      const spans = document.querySelectorAll('#scroll-text span');
       
       spans.forEach((span, index) => {
         if (index < text.length) {
           setTimeout(() => {
               span.textContent = text[index];  // 한 글자씩 넣기
               if (index === spans.length - 1)  {
-                document.querySelectorAll('.intro #sct').forEach(function(element) {
+                document.querySelectorAll('.intro__wrap #scroll-text').forEach(function(element) {
                   element.classList.add('highlight');
                 });
               }
@@ -135,13 +135,13 @@ import '../img/std.mp4';
         // scroller: '.lenis-wrap', 
       });
       introMotion
-        .to('.guage-area p', {
+        .to('.intro__gauge-area .intro__scroll-text', {
           scale:1.3,
           autoAlpha:0
         }, 'display+=0.8')
-        .to('.intro', {autoAlpha: 0})
+        .to('.intro__wrap', {autoAlpha: 0})
         .from('#header', {yPercent: -100, duration:1}, "introEnd")
-        .from(".sc-visual .hero-line span", 1.8,
+        .from(".visual__wrap .visual__hero-line span", 1.8,
         {
           y: 100,
           ease: "power4.out",
@@ -153,8 +153,8 @@ import '../img/std.mp4';
         }, "introEnd")
       }
   }
-  gsap.to(".sc-visual .ico-desc-01", { ease:'none', duration: 2, rotate: 18, repeat: -1, yoyo: true});
-  gsap.to(".sc-visual .ico-desc-02", { ease:'none', duration: 1.5, scale:1.15, repeat: -1, yoyo: true});
+  gsap.to(".visual__wrap .visual__icon--desc-1", { ease:'none', duration: 2, rotate: 18, repeat: -1, yoyo: true});
+  gsap.to(".visual__wrap .visual__icon--desc-2", { ease:'none', duration: 1.5, scale:1.15, repeat: -1, yoyo: true});
 
 
   
@@ -163,10 +163,10 @@ import '../img/std.mp4';
 
 
 
-  // ---------------  태블릿 이상 sc-visual --------------- 
+  // ---------------  태블릿 이상 visual__wrap --------------- 
   const mainTxt = gsap.timeline({
     scrollTrigger: {
-      trigger: '.sc-visual .sticky-wrapper',
+      trigger: '.visual__wrap .visual__sticky-wrapper',
       start: "0% 0%",
       end: "100% 100%",
       scrub: 1,
@@ -180,19 +180,19 @@ import '../img/std.mp4';
   });
   
   mainTxt
-    .to('.sc-visual .main-cont', {
+    .to('.visual__wrap .visual__content', {
       scale: 0.4,
     }, 'mainTxt')
-    .to('.sc-visual .hero-line-4, .sc-visual .hero-line-3, .sc-visual .hero-line-2, .sc-visual .hero-line-1', {
+    .to('.visual__wrap .visual__hero-line--4, .visual__wrap .visual__hero-line--3, .visual__wrap .visual__hero-line--2, .visual__wrap .visual__hero-line--1', {
       autoAlpha: 0.1,
       color: '#000',
     }, 'mainTxt')
-    .to('.sc-visual .hero-line-5', {
+    .to('.visual__wrap .visual__hero-line--5', {
       transform: 'translateY(-50vh)',
       autoAlpha: 1,
       scale: 1,
     })
-    .to('.sc-visual', {
+    .to('.visual__wrap', {
       autoAlpha: 0,
     });
   }
@@ -203,29 +203,29 @@ import '../img/std.mp4';
 
 
 
-  // -------------------- 태블릿 이상 sc-main -------------------- 
+  // -------------------- 태블릿 이상 main__wrap -------------------- 
   function scmainAnimation() {
     if (window.matchMedia("(min-width: 1024px)").matches) {
 
-      // prj-item hover 1) cursor
+      // main-projects__item hover 1) cursor
       document.addEventListener("mousemove", (e) => {
         const x = e.clientX;
         const y = e.clientY;
         $("#cursor_div").css('transform', 'translate(' + x + 'px, ' + y + 'px)');
-        $('.prj-item .thumb-wrap').on('mouseover', function () {
-          $('.inner_wrap').addClass('on');
+        $('.main-projects__item .main-projects__thumb-link').on('mouseover', function () {
+          $('.cursor__wrap').addClass('on');
           $('.cursor').css('display','none');
           document.body.style.cursor = 'none';
         });
-        $('.prj-item .thumb-wrap').on('mouseleave', function () {
-          $('.inner_wrap').removeClass('on');
+        $('.main-projects__item .main-projects__thumb-link').on('mouseleave', function () {
+          $('.cursor__wrap').removeClass('on');
           $('.cursor').css('display','block');
           document.body.style.cursor = 'default';
         });
       });
 
-      // prj-item hover 2) scramble
-    //   $(".prj-item").each(function (index, element){
+      // main-projects__item hover 2) scramble
+    //   $(".main-projects__item").each(function (index, element){
     //     if (!element.animation) {
     //       var currentScramble = new ScrambleText( 
     //         document.getElementById('tit-scr0' + (index+1)),
@@ -245,19 +245,19 @@ import '../img/std.mp4';
     //     }
     //   });
 
-    //   $(".prj-item").on('mouseenter', function () {
+    //   $(".main-projects__item").on('mouseenter', function () {
     //     if (!this.animationStopped) { 
     //       this.animation.start().play();
     //     }
     //   });
-    //   $(".prj-item").on('mouseleave', function () {
+    //   $(".main-projects__item").on('mouseleave', function () {
     //     this.animation.stop(1);
     //     this.animationStopped = true;  
     //   });
     // } else {
     //   document.removeEventListener("mousemove", null);
-    //   $(".prj-item .thumb-wrap").off('mouseover mouseleave');
-    //   $(".prj-item").off('mouseenter mouseleave');
+    //   $(".main-projects__item .main-projects__thumb-link").off('mouseover mouseleave');
+    //   $(".main-projects__item").off('mouseenter mouseleave');
     }
   }
 
@@ -267,15 +267,15 @@ import '../img/std.mp4';
 
 
 
-  // -------------------- 태블릿 이상 sc-fe -------------------- 
+  // -------------------- 태블릿 이상 front__wrap -------------------- 
   let scfeTimeline = null;
   function scfeAnimation() {
     if (window.matchMedia("(min-width: 1025px)").matches) {
-      // sc-fe yper
+      // front__wrap yper
       if (!scfeTimeline) {
         scfeTimeline = gsap.timeline({
           scrollTrigger: {
-            trigger: '.sc-fe',
+            trigger: '.front__wrap',
             start: '10% 80%',
             end: '0% 0%',
             scrub: 1,
@@ -285,7 +285,7 @@ import '../img/std.mp4';
           },
         });
         scfeTimeline
-        .fromTo('.sc-fe .fe-list', {
+        .fromTo('.front__wrap .projects-fe__list', {
           yPercent: 10,
         }
       , {
@@ -293,8 +293,8 @@ import '../img/std.mp4';
       });
       }
 
-      // fe-item hover
-      $(".fe-item").each(function (index, element){
+      // projects-fe__item hover
+      $(".projects-fe__item").each(function (index, element){
         if (!element.animation) {
           var tl = gsap.timeline({
             paused:true,
@@ -302,13 +302,13 @@ import '../img/std.mp4';
             skewY: 7,
           });
           tl
-          .fromTo($(element).find(".thumb-area p"), {
+          .fromTo($(element).find(".projects-fe__thumb-area p"), {
               y: '0',
             },
             {
               y: '-200',
             },'img')
-            .fromTo($(element).find(".thumb-area .link-box"), {
+            .fromTo($(element).find(".projects-fe__thumb-area .projects-fe__link-box"), {
               yPercent: -100,
             },
             {
@@ -324,27 +324,27 @@ import '../img/std.mp4';
           element.animation = tl;
         }
       });
-      $(".fe-item").on('mouseenter', function() {
+      $(".projects-fe__item").on('mouseenter', function() {
         this.animation.play();
       });
-      $(".fe-item").on('mouseleave', function() {
+      $(".projects-fe__item").on('mouseleave', function() {
         this.animation.reverse(0.5);
       });
     } else {
-      // sc-fe yper
+      // front__wrap yper
       if (scfeTimeline) {
         scfeTimeline.kill(); // GSAP 애니메이션 제거
         scfeTimeline = null;
       }
-      // fe-item hover
-      $(".fe-item").each(function (index, element){
+      // projects-fe__item hover
+      $(".projects-fe__item").each(function (index, element){
         if (element.animation) {
           // 애니메이션을 초기화하고 삭제
           element.animation.kill();
           element.animation = null;
         }
       });
-      $(".fe-item").off('mouseenter mouseleave'); // 이벤트 리스너 비활성화
+      $(".projects-fe__item").off('mouseenter mouseleave'); // 이벤트 리스너 비활성화
     }
   }
 
@@ -355,16 +355,16 @@ import '../img/std.mp4';
 
 
 
-// -------------------- sc-work -------------------- 
+// -------------------- work__wrap -------------------- 
   let scworkTimeline = null;
   function scworkAnimation() {
     if (window.matchMedia("(min-width: 1441px)").matches) {
 
-      // sc-work yper
+      // work__wrap yper
       if (!scworkTimeline) {
         scworkTimeline = gsap.timeline({
           scrollTrigger: {
-            trigger: '.sc-work',
+            trigger: '.work__wrap',
             start: '10% 80%',
             end: '10% 10%',
             scrub: 1,
@@ -372,13 +372,13 @@ import '../img/std.mp4';
             // scroller: '.lenis-wrap', 
           },
         });
-        scworkTimeline.to('.sc-work .work-list', {
+        scworkTimeline.to('.work__wrap .work__list', {
           yPercent: -5,
         });
       }
       
-      // work-item hover
-      $('.sc-work .work-item').hover(function() {
+      // work__item hover
+      $('.work__wrap .work__item').hover(function() {
         gsap.to($(this), {
           duration: 0.5,
           xPercent: -3,
@@ -398,12 +398,12 @@ import '../img/std.mp4';
       }
     );
     } else {
-      // sc-work yper
+      // work__wrap yper
       if (scworkTimeline) {
         scworkTimeline.kill(); // GSAP 애니메이션 제거
         scworkTimeline = null;
       }
-      $('.sc-work .work-item').off('mouseenter mouseleave');
+      $('.work__wrap .work__item').off('mouseenter mouseleave');
     }
   }
   scmainAnimation();

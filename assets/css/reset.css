@@ -10,27 +10,32 @@ ul {list-style: none;}
 form, input {border: none;}
 
 
+:root {
+  --black:#000;
+  --black-1:#333;
+  --white:#fff;
+  --white-1:#fafaf8;
+  --white-2:#efefef;
+  --white-3:#eee;
+  --white-4:#ddd;
+  --gray:#888;
+
+  /* 폰트관련 */
+  --font-family-preten: "Pretendard", sans-serif;
+  --base-letterspacing:-0.02em;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
 body {
-  font-family: "Creato Display", 'Pretendard', sans-serif;
-  background: #000;
-  letter-spacing: -.02em;
-  word-break: keep-all;
+  background: var(--black);
+  color: var(--white);
+  letter-spacing: var(--base-letterspacing);
+  font-family: var(--font-family-preten);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-color);
+  font-size: var(--base-font-size);
+  word-break: break-all;
 }
-/* html {
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-.lenis-wrap {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  overflow: hidden;
-  overflow-y: auto;
-  width: 100%;
-} */

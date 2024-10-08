@@ -14,14 +14,14 @@
 
 /* cursor custom */
 .cursor {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 100;
   width:12px;
   height: 12px;
   border-radius: 50%;
-  position: fixed;
-  z-index: 100;
   backdrop-filter: sepia(100%);
   filter: invert(1);
-  transform: translate(-50%, -50%);
   transition: all 0.3s ease;
   transition-property: transform;
   pointer-events: none;
@@ -29,19 +29,19 @@
 .cursor.on {
   transform: scale(1.05);
 }
-#cursor_div {position: fixed;left: 0;top: 0;pointer-events: none;z-index: 5000;} 
+#cursor_div {position: fixed;left: 0;top: 0;z-index: 5000;pointer-events: none;} 
 #cursor_div .cursor__wrap { 
+  transform: translate(-50%, -50%); 
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  transform: translate(-50%, -50%); 
   transition: opacity .3s ease; 
   opacity: 0; 
 } 
 #cursor_div .cursor__wrap.on {opacity: 1;} 
 #cursor_div .cursor__inner { text-align: center;} 
 #cursor_div .cursor__inner p {
-  font-size: 16px;
+  /* font-size: 16px; */
   color: var(--white);
   font-weight: bold;
   text-transform: uppercase;

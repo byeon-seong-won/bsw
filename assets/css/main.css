@@ -1,15 +1,16 @@
 
-
 /* intro */
 .intro__wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;left: 0;
-  right: 0;bottom: 0;
   background: var(--white);
-  z-index: 10;
 }
 .intro__wrap .intro__gauge-area {
   position: relative;
@@ -20,8 +21,8 @@
 .intro__wrap #scroll-text {
   position: relative;
   display: inline-block;
-  overflow: hidden; 
   padding-bottom: 5px;
+  overflow: hidden; 
   text-transform: uppercase;
 }
 .intro__wrap #scroll-text::after {
@@ -66,17 +67,17 @@
   top: 0;
 }
 .visual__wrap .visual__content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--white); 
-  z-index: 100;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
   width: 100%;
+  z-index: 100;
+  color: var(--white); 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .visual__wrap .visual__content .visual__hero-text {
   text-align: center;
@@ -88,9 +89,9 @@
 } 
 .visual__wrap .visual__content .visual__hero-text .visual__hero-line {
   display: block;
-  font-size:8vw;
-  overflow: hidden;
   text-align: center;
+  font-size: 8vw;
+  overflow: hidden;
 }
 .visual__wrap .visual__content .visual__hero-text .visual__line-content {
   display: flex;
@@ -130,7 +131,10 @@
 
 
 /* main__wrap */
-.main__wrap {margin-top: 100px;padding: 0 20px;}
+.main__wrap {
+  margin-top: 100px;
+  padding: 0 20px;
+}
 .main__wrap .headline {
   font-size: 18px;
   letter-spacing: 0.1rem;
@@ -148,10 +152,10 @@
   grid-row-gap: 140px;
 }
 .main__wrap .main-projects__item {
+  position: relative;
+  height: 700px;
   display: flex;
   flex-direction: column;
-  height: 700px;
-  position: relative;
 }
 .main__wrap .main-projects__item:nth-child(6) {
   height: 600px;
@@ -188,20 +192,19 @@
   grid-row: 4 / 5;
 }
 .main__wrap .main-projects__item .thumb-area {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  position: relative;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .main__wrap .main-projects__item .thumb-area .img-box {
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .main__wrap .main-projects__item .ori-img {
   position: absolute;
@@ -216,10 +219,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
   transform: scale(1.2);
   width: 100%;
   height: 100%;
+  opacity: 0;
   transition: opacity .15s linear .1s, transform .25s cubic-bezier(.55,.085,.68,.53);
   object-fit: cover;
 }
@@ -232,37 +235,37 @@
   opacity: 0;
 }
 .main__wrap .main-projects__item .info-area {
-  color: var(--white); 
   margin-top: 15px;
+  color: var(--white); 
 }
 .main__wrap .main-projects__item .info-area p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 20px;
-  color:var(--white-1);
   font-weight: var(--font-weight-regular);
+  color:var(--white-1);
 }
 .main__wrap .main-projects__item .info-area span:nth-of-type(1) {
   font-weight: var(--font-weight-light);
   font-size: 18px;
 }
 .main__wrap .main-projects__item .info-area span:nth-of-type(2) {
-  letter-spacing: 0.1rem;
   display: block;
   margin-top: 8px;
   font-size: 16px;
   color:var(--white-2);
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1rem;
 }
 .main__wrap .main-projects__item .info-area .main-projects__review-link:hover::after {
   bottom: 50%;
 }
 .main__wrap .main-projects__item .info-area .main-projects__review-link {
-  position: relative;
-  font-size: 18px;
   display: inline-block;
+  position: relative;
   margin-top: 15px;
   padding: 10px 0;
+  font-size: 18px;
 }
 .main__wrap .main-projects__item .info-area .main-projects__review-link::after {
   content: '';
@@ -308,18 +311,18 @@
 }
 .front__wrap .projects-fe__item > a {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 .front__wrap .projects-fe__item+.projects-fe__item {
   margin-top: 20px;
 }
 .front__wrap .projects-fe__item .projects-fe__info-area {
-  flex: 1;
   height: 100%;
+  flex: 1;
 }
 .front__wrap .projects-fe__item .projects-fe__info-area p {
   font-size: 80px;
@@ -330,33 +333,33 @@
 }
 .front__wrap .projects-fe__item .projects-fe__thumb-area {
   position: relative;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 10px;
   overflow: hidden;
-  height: 200px;
   flex: 1;
 }
 .front__wrap .projects-fe__item .projects-fe__link-box {
+  margin-top: 25px;
   display: flex;
   justify-content: start;
   gap: 7px;
-  margin-top: 25px;
 }
 .front__wrap .projects-fe__item .projects-fe__link-box a {
-  background: var(--white);
+  display: inline-block;
+  padding: 6px;
+  z-index: 3;
   color: var(--black-1);
   border-radius: 5px;
-  padding: 6px;
-  display: inline-block;
   font-size: 16px;
   transition: .3s;
-  z-index: 3;
+  background: var(--white);
 }
 .front__wrap .projects-fe__item .projects-fe__link-box a:hover {
-  background: var(--black-1);
   color: var(--white);
+  background: var(--black-1);
 }
 .front__wrap .projects-fe__item .projects-fe__thumb-area p {
   font-size: 35px;
@@ -365,14 +368,14 @@
 .front__wrap .projects-fe__item .projects-fe__thumb-area .hover-list {
   position: absolute;
   right: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 100%;
 }
 .front__wrap .projects-fe__item .projects-fe__thumb-area .hover-item {
-  flex: 1;
   height: 100%;
+  flex: 1;
   object-fit: contain;
 }
 .front__wrap .projects-fe__item .projects-fe__thumb-area .hover-item img {
@@ -385,8 +388,8 @@
 /* work__wrap */
 .work__wrap {
   position: relative;
-  color: var(--white);
   text-align: center;
+  color: var(--white);
 }
 .work__wrap::before {
   content: '';
@@ -394,15 +397,15 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  height: 200px;
   width: 1px;
+  height: 200px;
   background: var(--white);
   opacity: .2;
 }
 .work__wrap .headline {
+  position: relative;
   margin-top: 300px;
   font-size: 150px;
-  position: relative;
 }
 .work__wrap .work__list {
   width: 100%;
@@ -417,12 +420,12 @@
   background: linear-gradient(90deg, hsla(0, 0%, 100%, .1) 80%, transparent);
 }
 .work__wrap .work__item a {
-  display: grid;
-  grid-template-columns: 1fr 3fr 4fr;
   width: 70%;
   margin: 0 auto;
   padding: 100px 0;
   text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 3fr 4fr;
 }
 .work__wrap .work__item:nth-child(2n) a {
   border-top: .1rem solid hsla(0, 0%, 100%, .2);
@@ -436,7 +439,6 @@
   color: var(--white);
 }
 .work__wrap .work__item .title {
-  color: var(--white);
   font-size: 50px;
   color: var(--white);
 }
@@ -444,8 +446,8 @@
   font-size: 20px;
 }
 .work__wrap .work__item .works__desc li {
-  font-size: 20px;
   width: 70%;
+  font-size: 20px;
   color: var(--white);
 }
 .work__wrap .work__item .works__desc li+li {
@@ -461,8 +463,8 @@
   display: block;
   margin-top: 20px;
   font-size: 16px;
-  color: var(--gray);
   font-weight: var(--font-weight-medium);
+  color: var(--gray);
 }
 
 
@@ -502,9 +504,9 @@
     font-size: 16px;
   }
   .work__wrap .headline {
+    position: relative;
     margin-top: 300px;
     font-size: 100px;
-    position: relative;
   }
   .work__wrap .work__item a {
     width: 85%;
@@ -526,18 +528,18 @@
   }
   .work__wrap .work__item a {
     width: 100%;
-    grid-template-columns: 1fr 2fr 4fr;
     padding: 30px 20px;
+    grid-template-columns: 1fr 2fr 4fr;
   }
 }
 
 
 @media (max-width:1200px) {
   .main__wrap .main-projects__list {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
   }
   .main__wrap .main-projects__item {
     height: 550px;
@@ -578,8 +580,8 @@
     color: var(--white);
   }
   .visual__wrap .mo-display .visual__mobile-content .visual__mobile-text {
-    font-size: 60px;
     width: 60%;
+    font-size: 60px;
     text-align: center;
   }
   .about__wrap .about__inner {
@@ -651,8 +653,8 @@
   }
   .work__wrap .work__item .works__desc li {
     width: 100%;
-    font-size: 14px;
     margin-top: 5px;
+    font-size: 14px;
     color: var(--white-4);
   }
   .work__wrap .work__item .works__desc span {
@@ -665,8 +667,8 @@
 
 @media (max-width:768px) {
   .visual__wrap .mo-display .visual__mobile-content .visual__mobile-text {
-    font-size: 45px;
     width: 90%;
+    font-size: 45px;
   }
   .about__wrap .about__inner .about__content br {
     display: none;

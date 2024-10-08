@@ -32,7 +32,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|webp|mp4|ico)$/,
+        test: /\.(webp|mp4|ico)$/,
         use: {
           loader:"file-loader",
           options: {

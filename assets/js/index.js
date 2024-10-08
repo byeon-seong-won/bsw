@@ -17,29 +17,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 // img 번들링
-import '../img/ico-intro-1.png';
-import '../img/ico-intro-2.png';
-import '../img/blog-mo-re.jpg';
-import '../img/blog-pc-re.jpg';
-import '../img/blog-tab-re.jpg';
-import '../img/shop-tab-re.jpg';
-import '../img/shop-pc-re.jpg';
-import '../img/shop-mo-re.jpg';
-import '../img/mypage-tab-re.jpg';
-import '../img/mypage-pc-re.jpg';
-import '../img/mypage-mo-re.jpg';
-import '../img/chall-hv.jpg';
-import '../img/city-hall.jpg';
+import '../img/ico-intro-1.webp';
+import '../img/ico-intro-2.webp';
+import '../img/blog-mo-re.webp';
+import '../img/blog-pc-re.webp';
+import '../img/blog-tab-re.webp';
+import '../img/shop-tab-re.webp';
+import '../img/shop-pc-re.webp';
+import '../img/shop-mo-re.webp';
+import '../img/mypage-tab-re.webp';
+import '../img/mypage-pc-re.webp';
+import '../img/mypage-mo-re.webp';
+import '../img/chall-hv.webp';
+import '../img/city-hall.webp';
 import '../img/favi.ico';
-import '../img/guess-hv.png';
+import '../img/guess-hv.webp';
 import '../img/guess.mp4';
-import '../img/naver-hv.gif';
+import '../img/naver-hv.mp4';
 import '../img/naver.mp4';
 import '../img/olive-hv.mp4';
-import '../img/olive-mo.jpg';
-import '../img/olive-mo-hv.jpg';
-import '../img/olive-pc.jpg';
-import '../img/std-hv.png';
+import '../img/olive-mo.webp';
+import '../img/olive-mo-hv.webp';
+import '../img/olive-pc.webp';
+import '../img/std-hv.webp';
 import '../img/std.mp4';
 
 

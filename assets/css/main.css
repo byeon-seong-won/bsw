@@ -330,6 +330,7 @@
 .front__wrap .projects-fe__item .projects-fe__info-area span {
   font-size: 20px;
   font-weight: var(--font-weight-light);
+  letter-spacing: 0.01rem;
 }
 .front__wrap .projects-fe__item .projects-fe__thumb-area {
   position: relative;
@@ -676,6 +677,12 @@
   .main__wrap .main-projects__item .info-area p {
     font-size: 16px;
   }
+  .main__wrap .main-projects__item .info-area span:nth-of-type(1) {
+    font-size: 15px;
+  }
+  .main__wrap .main-projects__item .info-area span:nth-of-type(2) {
+    font-size: 14px;
+  }
   .main__wrap .main-projects__item .info-area .main-projects__review-link {
     margin-top: 5px;
     font-size: 15px;
@@ -691,16 +698,23 @@
     margin-top: 100px;
   }
   .front__wrap .projects-fe__item .projects-fe__link-box {
-    margin-top: 5px;
+    margin-top: 10px;
+  }
+  .front__wrap .projects-fe__item .projects-fe__link-box a {
+    padding: 3px;
+    font-size: 13px;
   }
   .front__wrap .projects-fe__item .projects-fe__thumb-area {
-    flex: 1;
+    /* flex: 1; */
+    display: none;
   }
   .front__wrap .projects-fe__item .projects-fe__info-area p {
     font-size: 18px;
   }
   .front__wrap .projects-fe__item .projects-fe__info-area span {
-    font-size: 16px;
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
   }
   .work__wrap::before {
     content: none;

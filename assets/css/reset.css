@@ -38,5 +38,5 @@ body {
   font-weight: var(--font-weight-medium);
   color: var(--primary-color);
   font-size: var(--base-font-size);
-  word-break: break-all;
+  word-break: keep-all;
 }

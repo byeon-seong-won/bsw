@@ -467,7 +467,16 @@
   font-weight: var(--font-weight-medium);
   color: var(--gray);
 }
-
+.floating-btn {
+  position: fixed;
+  right: 60px;
+  bottom: 40px;
+  display: inline-block;
+  z-index: 100;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
 
 
 
@@ -563,6 +572,12 @@
   }
   .front__wrap .projects-fe__item .projects-fe__thumb-area {
     flex: 1.5;
+  }
+  .floating-btn {
+    right: 50px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -722,6 +737,9 @@
   .work__wrap .headline {
     margin-top: 100px;
     font-size: 30px;
+  }
+  .floating-btn {
+    right: 30px;
   }
 
 }

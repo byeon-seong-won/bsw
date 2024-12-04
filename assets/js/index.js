@@ -41,7 +41,7 @@ import '../img/olive-mo-hv.webp';
 import '../img/olive-pc.webp';
 import '../img/std-hv.webp';
 import '../img/std.mp4';
-
+import '../img/notion-logo.webp';
 
 
 

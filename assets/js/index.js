@@ -42,6 +42,26 @@ import '../img/olive-pc.webp';
 import '../img/std-hv.webp';
 import '../img/std.mp4';
 import '../img/notion-logo.webp';
+import '../img/banner-01.webp';
+import '../img/banner-02.webp';
+import '../img/banner-03.webp';
+import '../img/banner-04.webp';
+import '../img/banner-05.webp';
+import '../img/banner-06.webp';
+import '../img/banner-07.webp';
+import '../img/banner-08.webp';
+import '../img/event-01.webp';
+import '../img/event-02.webp';
+import '../img/event-03.webp';
+import '../img/event-04.webp';
+import '../img/event-05.webp';
+import '../img/event-06.webp';
+import '../img/cate-01.webp';
+import '../img/cate-02.webp';
+import '../img/cate-03.webp';
+import '../img/cate-04.webp';
+import '../img/cate-05.webp';
+
 
 
 

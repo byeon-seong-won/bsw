@@ -61,7 +61,12 @@ import '../img/cate-02.webp';
 import '../img/cate-03.webp';
 import '../img/cate-04.webp';
 import '../img/cate-05.webp';
-
+import '../img/freitag-01.webp';
+import '../img/freitag-02.webp';
+import '../img/freitag-03.webp';
+import '../img/bbt-01.webp';
+import '../img/bbt-02.webp';
+import '../img/bbt-03.webp';
 
 
 
@@ -309,7 +314,7 @@ import '../img/cate-05.webp';
           yPercent: 10,
         }
       , {
-        yPercent: -5,
+        yPercent: -2,
       });
       }
 

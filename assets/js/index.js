@@ -73,6 +73,8 @@ import '../img/bbt-03.webp';
 
 
 
+
+
   // --------------- lenis scroll --------------- 
   const lenis = new Lenis({
     duration: 2,

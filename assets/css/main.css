@@ -353,11 +353,12 @@
 }
 .front__wrap .projects-fe__item .projects-fe__link-box a {
   display: inline-block;
-  padding: 6px;
+  padding: 6px 10px;
   z-index: 3;
   color: var(--black-1);
   border-radius: 5px;
   font-size: 16px;
+  letter-spacing: 0.3px;
   transition: .3s;
   background: var(--white);
 }

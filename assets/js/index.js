@@ -66,12 +66,10 @@ import '../img/freitag-03.webp';
 import '../img/bbt-01.webp';
 import '../img/bbt-02.webp';
 import '../img/bbt-03.webp';
-import '../img/wt-01.webp';
 import '../img/wt-02.webp';
 import '../img/wt-03.webp';
-import '../img/dumcbd.webp';
-import '../img/dumcbd-02.webp';
-
+import '../img/ddu-01.webp';
+import '../img/ddu-02.webp';
 
 
 

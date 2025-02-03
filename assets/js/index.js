@@ -119,79 +119,6 @@ import '../img/ddu-02.webp';
 
 
 
-  // --------------- 태블릿 이상 intro ~ visual__wrap --------------- 
-  if (window.matchMedia("(min-width: 1024px)").matches) {
-    var spans = document.querySelectorAll('#scroll-text span');
-    spans.forEach(function(span, index) {
-        var currentScramble = new ScrambleText(
-            span,
-            {
-              timeOffset: 800 + index * 70, 
-              callback: function () {
-                if (index === spans.length - 1)  {
-                  setTimeout(()=> {
-                    wordChange();
-                  },500)
-                }
-              },
-            }
-        );
-        currentScramble.start();
-    });
-    function wordChange() {
-      const text = 'portfolio'; 
-      const spans = document.querySelectorAll('#scroll-text span');
-      
-      spans.forEach((span, index) => {
-        if (index < text.length) {
-          setTimeout(() => {
-              span.textContent = text[index];  // 한 글자씩 넣기
-              if (index === spans.length - 1)  {
-                document.querySelectorAll('.intro__wrap #scroll-text').forEach(function(element) {
-                  element.classList.add('highlight');
-                });
-              }
-          }, index * 170);  // 각 글자가 0.1초간격으로 들어감
-        }
-      });
-      setTimeout(()=> {
-        startIntroMotion();
-      }
-    ,1500)
-
-    function startIntroMotion() {
-      const introMotion = gsap.timeline({
-        // scroller: '.lenis-wrap', 
-      });
-      introMotion
-        .to('.intro__gauge-area .intro__scroll-text', {
-          scale:1.3,
-          autoAlpha:0
-        }, 'display+=0.8')
-        .to('.intro__wrap', {autoAlpha: 0})
-        .from('#header', {yPercent: -100, duration:1}, "introEnd")
-        .from(".visual__wrap .visual__hero-line span", 1.8,
-        {
-          y: 100,
-          ease: "power4.out",
-          skewY: 9,
-          yPercent: 100,
-          stagger: {
-            amount: 1
-          },
-        }, "introEnd")
-      }
-  }
-  gsap.to(".visual__wrap .visual__icon--desc-1", { ease:'none', duration: 2, rotate: 18, repeat: -1, yoyo: true});
-  gsap.to(".visual__wrap .visual__icon--desc-2", { ease:'none', duration: 1.5, scale:1.15, repeat: -1, yoyo: true});
-
-
-  
-
-
-
-
-
   // ---------------  태블릿 이상 visual__wrap --------------- 
   const mainTxt = gsap.timeline({
     scrollTrigger: {
@@ -224,7 +151,7 @@ import '../img/ddu-02.webp';
     .to('.visual__wrap', {
       autoAlpha: 0,
     });
-  }
+
 
 
 

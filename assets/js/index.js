@@ -6,8 +6,6 @@ import '../css/main.css';
 
 // js 파일 번들링
 import $ from 'jquery';
-import SplitType from 'split-type'
-import ScrambleText from 'scramble-text';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from '@studio-freight/lenis';
@@ -131,7 +129,6 @@ import '../img/ddu-02.webp';
       stagger: {
         amount: 1,
       },
-      // scroller: '.lenis-wrap', 
     },
   });
   
@@ -179,41 +176,6 @@ import '../img/ddu-02.webp';
           document.body.style.cursor = 'default';
         });
       });
-
-      // main-projects__item hover 2) scramble
-    //   $(".main-projects__item").each(function (index, element){
-    //     if (!element.animation) {
-    //       var currentScramble = new ScrambleText( 
-    //         document.getElementById('tit-scr0' + (index+1)),
-    //         {
-    //           timeOffset: 100 + index * 10, 
-    //           chars: [
-    //             'A', 'B', 'C', 'D', 'E',
-    //             'F', 'G', 'H', 'I', 'J',
-    //             'K', 'L', 'M', 'N', 'O',
-    //             'P', 'Q', 'R', 'S', 'T', 'U',
-    //             'V', 'W', 'X', 'Y', 'Z'
-    //           ],
-    //         }
-    //       );
-    //       element.animation = currentScramble;
-    //       element.animationStopped = false; 
-    //     }
-    //   });
-
-    //   $(".main-projects__item").on('mouseenter', function () {
-    //     if (!this.animationStopped) { 
-    //       this.animation.start().play();
-    //     }
-    //   });
-    //   $(".main-projects__item").on('mouseleave', function () {
-    //     this.animation.stop(1);
-    //     this.animationStopped = true;  
-    //   });
-    // } else {
-    //   document.removeEventListener("mousemove", null);
-    //   $(".main-projects__item .main-projects__thumb-link").off('mouseover mouseleave');
-    //   $(".main-projects__item").off('mouseenter mouseleave');
     }
   }
 
@@ -325,7 +287,6 @@ import '../img/ddu-02.webp';
             end: '10% 10%',
             scrub: 1,
             ease: "none",
-            // scroller: '.lenis-wrap', 
           },
         });
         scworkTimeline.to('.work__wrap .work__list', {
@@ -340,7 +301,6 @@ import '../img/ddu-02.webp';
           xPercent: -3,
           yPercent: 2,
           ease: "linear",
-          // scroller: '.lenis-wrap', 
         });
       }
       , function() {

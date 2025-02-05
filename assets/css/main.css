@@ -248,9 +248,7 @@
 .front__wrap .projects-fe__list {
   width: 100%;
 }
-.front__wrap .projects-fe__list:nth-of-type(1) {
-  margin-bottom: 300px;
-}
+
 .front__wrap .projects-fe__item {
   position: relative;
   color:  var(--white); 
@@ -452,9 +450,6 @@
 
 
 @media (max-width:1600px) {
-  .front__wrap .projects-fe__list:nth-of-type(1) {
-    margin-bottom: 100px;
-  }
   .front__wrap .projects-fe__item .projects-fe__info-area p {
     font-size: 60px;
   }

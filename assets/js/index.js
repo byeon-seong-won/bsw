@@ -115,47 +115,6 @@ import '../img/ddu-02.webp';
 
 
 
-
-
-  // ---------------  태블릿 이상 visual__wrap --------------- 
-  const mainTxt = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.visual__wrap .visual__sticky-wrapper',
-      start: "0% 0%",
-      end: "100% 100%",
-      scrub: 1,
-      ease: "power4.out",
-      skewY: 7,
-      stagger: {
-        amount: 1,
-      },
-    },
-  });
-  
-  mainTxt
-    .to('.visual__wrap .visual__content', {
-      scale: 0.4,
-    }, 'mainTxt')
-    .to('.visual__wrap .visual__hero-line--4, .visual__wrap .visual__hero-line--3, .visual__wrap .visual__hero-line--2, .visual__wrap .visual__hero-line--1', {
-      autoAlpha: 0.1,
-      color: '#000',
-    }, 'mainTxt')
-    .to('.visual__wrap .visual__hero-line--5', {
-      transform: 'translateY(-50vh)',
-      autoAlpha: 1,
-      scale: 1,
-    })
-    .to('.visual__wrap', {
-      autoAlpha: 0,
-    });
-
-
-
-
-  
-
-
-
   // -------------------- 태블릿 이상 main__wrap -------------------- 
   function scmainAnimation() {
     if (window.matchMedia("(min-width: 1024px)").matches) {

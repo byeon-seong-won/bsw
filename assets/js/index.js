@@ -79,12 +79,8 @@ import '../img/ddu-02.webp';
   const lenis = new Lenis({
     duration: 2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    // wrapper: document.querySelector('.lenis-wrap'),
-    // content: document.querySelector('.inner-lenis'),
   })
-  lenis.on('scroll', (e) => {
-    console.log(e)
-  })
+
   lenis.on('scroll', ScrollTrigger.update)
   gsap.ticker.add((time)=>{
     lenis.raf(time * 600)
@@ -95,20 +91,17 @@ import '../img/ddu-02.webp';
 
 
   // --------------- cursor custom --------------- 
-  let mouseCursor = document.querySelector(".cursor");
-  window.addEventListener("mousemove", (e) => {
-    gsap.to(mouseCursor, {
-      left: e.pageX + "px",
-      top: e.pageY - scrollY + "px",
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    let mouseCursor = document.querySelector(".cursor");
+    if (mouseCursor) {
+      window.addEventListener("mousemove", (e) => {
+        gsap.to(mouseCursor, {
+          left: e.pageX + "px",
+          top: e.pageY - scrollY + "px",
+        });
+      });
+    }
   });
-  
-  window.addEventListener("scroll", (e) => {
-    gsap.to(mouseCursor, {
-      top: e.pageY - scrollY + "px",
-    });
-  });
-
 
 
 
@@ -149,7 +142,7 @@ import '../img/ddu-02.webp';
   function scfeAnimation() {
     if (window.matchMedia("(min-width: 1025px)").matches) {
       // front__wrap yper
-      if (!scfeTimeline) {
+      if (document.querySelector('.front__wrap')) {
         scfeTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: '.front__wrap',
@@ -169,10 +162,10 @@ import '../img/ddu-02.webp';
         yPercent: -2,
       });
       }
-
       // projects-fe__item hover
       $(".projects-fe__item").each(function (index, element){
-        if (!element.animation) {
+        const target = $(element).find(".projects-fe__thumb-area p");
+        if (target.length > 0 && !element.animation) {  // 요소가 존재하는지 확인
           var tl = gsap.timeline({
             paused:true,
             ease: "power4.out",
@@ -238,7 +231,7 @@ import '../img/ddu-02.webp';
     if (window.matchMedia("(min-width: 1441px)").matches) {
 
       // work__wrap yper
-      if (!scworkTimeline) {
+      if (document.querySelector('.work__wrap')) {
         scworkTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: '.work__wrap',

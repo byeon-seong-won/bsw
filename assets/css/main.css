@@ -2,7 +2,7 @@
 
 /* sc-visual */
 .visual__wrap {
-  padding-top: 100px;
+  height: 100vh;
 }
 .visual__wrap .visual__content {
   height: 100%;

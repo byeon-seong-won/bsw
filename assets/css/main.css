@@ -401,12 +401,7 @@
 .work__wrap .work__item .works__desc .works__desc-title {
   margin-bottom: 20px;
 }
-.work__wrap .work__item .works__desc .works__desc-title.fe {
-  display: inline-block;
-  background-color: #fff;
-  color: #333;
-  font-size: 24px;
-}
+
 .work__wrap .work__item .works__desc li:last-child {
   list-style-type: none;
 }
@@ -503,9 +498,7 @@
   .work__wrap .work__item .works__desc li {
     font-size: 18px;
   }
-  .work__wrap .work__item .works__desc .works__desc-title.fe {
-    font-size: 20px;
-  }
+
   .front__wrap .projects-fe__item .projects-fe__info-area p {
     font-size: 45px;
   }
@@ -608,9 +601,7 @@
     font-size: 14px;
     color: var(--white-4);
   }
-  .work__wrap .work__item .works__desc .works__desc-title.fe {
-    font-size: 18px;
-  }
+
   .work__wrap .work__item .works__desc span {
     font-size: 14px;
   }

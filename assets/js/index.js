@@ -108,25 +108,34 @@ import '../img/ddu-02.webp';
 
 
 
-  // -------------------- 태블릿 이상 main__wrap -------------------- 
+  // --------------- 'SEE MORE' 커서 추종 요소 (#cursor_div) ---------------
+  // 리스너는 단 한 번만 등록 (resize/mousemove 중복 바인딩 방지)
+  const cursorDiv = document.querySelector("#cursor_div");
+  if (cursorDiv) {
+    window.addEventListener("mousemove", (e) => {
+      cursorDiv.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  }
+
+  // -------------------- 태블릿 이상 main__wrap --------------------
   function scmainAnimation() {
     if (window.matchMedia("(min-width: 1024px)").matches) {
-
-      document.addEventListener("mousemove", (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        $("#cursor_div").css('transform', 'translate(' + x + 'px, ' + y + 'px)');
-        $('.main-projects__item .main-projects__thumb-link').on('mouseover', function () {
+      // 네임스페이스 이벤트로 항상 off 후 on → resize 시에도 중복 바인딩되지 않음
+      $('.main-projects__item .main-projects__thumb-link')
+        .off('mouseover.prj mouseleave.prj')
+        .on('mouseover.prj', function () {
           $('.cursor__wrap').addClass('on');
-          $('.cursor').css('display','none');
+          $('.cursor').css('display', 'none');
           document.body.style.cursor = 'none';
-        });
-        $('.main-projects__item .main-projects__thumb-link').on('mouseleave', function () {
+        })
+        .on('mouseleave.prj', function () {
           $('.cursor__wrap').removeClass('on');
-          $('.cursor').css('display','block');
+          $('.cursor').css('display', 'block');
           document.body.style.cursor = 'default';
         });
-      });
+    } else {
+      // 데스크톱 미만: hover 핸들러 해제
+      $('.main-projects__item .main-projects__thumb-link').off('mouseover.prj mouseleave.prj');
     }
   }
 
@@ -136,5 +145,6 @@ import '../img/ddu-02.webp';
   $(window).on('resize', function() {
     scmainAnimation();
   });
+  scmainAnimation();
   
 

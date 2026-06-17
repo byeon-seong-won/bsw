@@ -17,6 +17,12 @@ module.exports = {
       filename: 'styles.css', // 하나로 번들링된 CSS 파일의 이름
     }),
   ],
+  devServer: {
+    static: path.resolve(__dirname, 'docs'), // dev 서버가 서빙할 폴더
+    port: 8080,
+    open: true,
+    hot: true,
+  },
   module: {
     rules: [
       {

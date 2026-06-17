@@ -6,7 +6,6 @@ import '../css/main.css';
 
 // js 파일 번들링
 import $ from 'jquery';
-import SplitType from 'split-type'
 import ScrambleText from 'scramble-text';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,9 +54,6 @@ import '../img/std.mp4';
     // wrapper: document.querySelector('.lenis-wrap'),
     // content: document.querySelector('.inner-lenis'),
   })
-  lenis.on('scroll', (e) => {
-    console.log(e)
-  })
   lenis.on('scroll', ScrollTrigger.update)
   gsap.ticker.add((time)=>{
     lenis.raf(time * 600)
@@ -67,20 +63,31 @@ import '../img/std.mp4';
 
 
 
-  // --------------- cursor custom --------------- 
+  // --------------- cursor custom ---------------
   let mouseCursor = document.querySelector(".cursor");
+  let lastMouseY = 0; // scroll 이벤트엔 pageY가 없으므로 마지막 마우스 위치를 보관
   window.addEventListener("mousemove", (e) => {
+    lastMouseY = e.pageY;
     gsap.to(mouseCursor, {
       left: e.pageX + "px",
-      top: e.pageY - scrollY + "px",
+      top: e.pageY - window.scrollY + "px",
     });
   });
-  
-  window.addEventListener("scroll", (e) => {
+
+  window.addEventListener("scroll", () => {
     gsap.to(mouseCursor, {
-      top: e.pageY - scrollY + "px",
+      top: lastMouseY - window.scrollY + "px",
     });
   });
+
+  // --------------- 'SEE MORE' 커서 추종 요소 (#cursor_div) ---------------
+  // 리스너는 단 한 번만 등록 (resize/mousemove 중복 바인딩 방지)
+  const cursorDiv = document.querySelector("#cursor_div");
+  if (cursorDiv) {
+    window.addEventListener("mousemove", (e) => {
+      cursorDiv.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  }
 
 
 
@@ -219,21 +226,19 @@ import '../img/std.mp4';
     if (window.matchMedia("(min-width: 1024px)").matches) {
 
       // prj-item hover 1) cursor
-      document.addEventListener("mousemove", (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        $("#cursor__div").css('transform', 'translate(' + x + 'px, ' + y + 'px)');
-        $('.prj-item .thumb-wrap').on('mouseover', function () {
+      // 네임스페이스 이벤트로 항상 off 후 on → resize 시에도 중복 바인딩되지 않음
+      $('.prj-item .thumb-wrap')
+        .off('mouseover.prj mouseleave.prj')
+        .on('mouseover.prj', function () {
           $('.inner_wrap').addClass('on');
-          $('.cursor').css('display','none');
+          $('.cursor').css('display', 'none');
           document.body.style.cursor = 'none';
-        });
-        $('.prj-item .thumb-wrap').on('mouseleave', function () {
+        })
+        .on('mouseleave.prj', function () {
           $('.inner_wrap').removeClass('on');
-          $('.cursor').css('display','block');
+          $('.cursor').css('display', 'block');
           document.body.style.cursor = 'default';
         });
-      });
 
       // prj-item hover 2) scramble
     //   $(".prj-item").each(function (index, element){
@@ -263,12 +268,11 @@ import '../img/std.mp4';
     //   });
     //   $(".prj-item").on('mouseleave', function () {
     //     this.animation.stop(1);
-    //     this.animationStopped = true;  
+    //     this.animationStopped = true;
     //   });
-    // } else {
-    //   document.removeEventListener("mousemove", null);
-    //   $(".prj-item .thumb-wrap").off('mouseover mouseleave');
-    //   $(".prj-item").off('mouseenter mouseleave');
+    } else {
+      // 데스크톱 미만: hover 핸들러 해제
+      $('.prj-item .thumb-wrap').off('mouseover.prj mouseleave.prj');
     }
   }
 

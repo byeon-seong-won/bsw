@@ -4,18 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SWb</title>
-  <link rel="stylesheet" href="./styles.css">
-  <!-- <link rel="stylesheet" href="./assets/css/layout.css">
-  <link rel="stylesheet" href="./assets/css/main.css"> -->
+  <!--
+    styles.css 와 bundle.js 는 빌드 시 HtmlWebpackPlugin / MiniCssExtractPlugin 이
+    자동으로 주입한다 (bundle.js 는 defer 로 주입됨).
+    여기에 수동으로 넣으면 이중 로드 + DOM 준비 전 실행 문제가 생기므로 넣지 않는다.
+  -->
   <link href="https://fonts.cdnfonts.com/css/creato-display" rel="stylesheet">
-  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
-  <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>  -->
-  <!-- <script src="https://unpkg.com/split.js/dist/split.min.js"></script> -->
-  <script src="./bundle.js"></script>
-  <!-- <script src="./assets/js/ScrambleText.js"></script>
-  <script src="./assets/js/index.js" defer></script> -->
   <link rel="shortcut icon" href="./assets/img/favi.ico" type="image/x-icon">
 </head>
 <body>
@@ -323,7 +317,7 @@
           </ul>
         </section>
         <section class="sc-work">
-          <h2 class="headline">~2024 WORKS</h2>
+          <h2 class="headline">~2026 WORKS</h2>
           <ul class="work-list">
             <li class="work-item">
               <a href="https://quilt-carpenter-2ad.notion.site/JamongLab-ver1-63bc5096cd3a43e1947c524663b4a37e" target="_blank">

@@ -324,6 +324,7 @@
 /* work__wrap */
 .work__wrap {
   position: relative;
+  margin-top: 160px;
   text-align: center;
   color: var(--white);
 }
@@ -576,11 +577,14 @@
   .front__wrap .projects-fe__item .projects-fe__thumb-area .hover-list {
     display: none;
   }
+  .work__wrap {
+    margin-top: 0;
+  }
   .work__wrap::before {
     height: 150px;
   }
   .work__wrap .headline {
-    margin-top: 50px;
+    margin-top: 120px;
     font-size: 50px;
   }
   .work__wrap .work__list {
@@ -672,7 +676,7 @@
     content: none;
   }
   .work__wrap .headline {
-    margin-top: 50px;
+    margin-top: 120px;
     font-size: 30px;
   }
   .floating-btn {
